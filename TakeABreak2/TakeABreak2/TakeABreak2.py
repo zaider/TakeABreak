@@ -1,6 +1,12 @@
-# run a timer that starts counting after 2 hours
+﻿# run a timer that starts counting after 2 hours
 import webbrowser
 import time
+import ctypes 
+
 # do something with the timer control
-time.sleep(10)
-webbrowser.open("http://michaelcrump.net/setting-up-github-to-work-with-visual-studio-2013-step-by-step/")
+print ("This program started on " + time.ctime())
+
+while True:
+    time.sleep(60*30)
+    #time.sleep(10)
+    ctypes.windll.user32.MessageBoxA(0, "Take a Break", "You should take a break", 0)
